@@ -1,14 +1,8 @@
 public class Initializer {
-    public static void main(String[] args) {
-        ComputerShop shop1 = new ComputerShop();
-        shop1.setShop("Colombo");
-        shop1.initializeComputers();
+    public static void main(String[] args) throws CloneNotSupportedException {
+        ComputerShop sh1 = new ComputerShop();
+        ComputerShop sh2 = (ComputerShop) sh1.clone();
+        System.out.println(sh1==sh2);
 
-        ComputerShop shop2 = new ComputerShop();
-        shop2.setShop("Kandy");
-        shop2.initializeComputers();
-
-        System.out.println(shop1);
-        System.out.println(shop2);
     }
 }

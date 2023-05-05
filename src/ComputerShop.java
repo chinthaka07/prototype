@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ComputerShop {
+public class ComputerShop implements Cloneable {
     private String shop;
     private ArrayList<Computer> computers = new ArrayList<>();
 
@@ -27,6 +27,11 @@ public class ComputerShop {
 
     public void setComputers(ArrayList<Computer> computers) {
         this.computers = computers;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
